@@ -1,0 +1,3 @@
+[submodule "quickstart/themes/hugo-profile"]
+	path = quickstart/themes/hugo-profile
+	url = https://github.com/gurusabarish/hugo-profile.git
