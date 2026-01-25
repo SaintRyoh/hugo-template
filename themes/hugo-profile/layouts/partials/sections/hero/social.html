@@ -16,7 +16,7 @@
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
             class="btn social-icon"
         >
-            <img src="{{ .icon }}">
+            <img src="{{ $.Site.Params.staticPath }}{{ .icon }}">
         </a>
     </span>
     {{ end }}

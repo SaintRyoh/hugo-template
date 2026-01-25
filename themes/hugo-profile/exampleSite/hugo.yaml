@@ -61,7 +61,11 @@ Menus:
 params:
   title: "Hugo Profile"
   description: Text about my cool site
-  # staticPath: ""  # The path to serve the static files from
+  # staticPath: URL prefix for GitHub Pages subdir deployment
+  # Set to "/project-name" for https://user.github.io/project-name/
+  # Leave empty "" for root site https://user.github.io/
+  # All image paths in config/content are relative - staticPath is prepended automatically
+  staticPath: ""
   favicon: "/fav.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between

@@ -102,6 +102,54 @@ hugo new content content/blogs/my-post.md
 
 This creates a new file in the `content/blogs/` folder with front matter that includes metadata like the date.
 
+## GitHub Pages Deployment (staticPath Configuration)
+
+The theme supports deploying to both **user sites** (e.g., `https://username.github.io/`) and **project sites** (e.g., `https://username.github.io/project-name/`).
+
+All image paths in your configuration and content should be **relative** (without the project prefix). The theme automatically prepends `staticPath` to all image paths.
+
+### User Site (Root Deployment)
+
+For a **user site** deployed to `https://username.github.io/`:
+
+```yaml
+baseURL: "https://username.github.io/"
+params:
+  staticPath: ""  # Empty for root site
+  favicon: "/fav.png"  # Relative path
+  hero:
+    image: /images/hero.svg  # Relative path
+```
+
+### Project Site (Subdirectory Deployment)
+
+For a **project site** deployed to `https://username.github.io/my-project/`:
+
+```yaml
+baseURL: "https://username.github.io/my-project/"
+params:
+  staticPath: "/my-project"  # Leading slash, no trailing slash
+  favicon: "/fav.png"  # Relative path - staticPath prepended automatically
+  hero:
+    image: /images/hero.svg  # Relative path - staticPath prepended automatically
+```
+
+### Image Paths in Content
+
+In content front matter, use relative paths:
+
+```yaml
+---
+title: "My Blog Post"
+image: /images/post.jpg  # Relative path - staticPath prepended by theme
+---
+```
+
+**Key Points:**
+- Only change `staticPath` when switching between user site and project site
+- All other image paths remain relative (e.g., `/images/hero.svg`)
+- The theme handles prepending `staticPath` to all image references
+
 Here are some useful resources for your reference:
 
 * [Hugo's Quick Start Guide](https://gohugo.io/getting-started/quick-start/) – About how to create a site, add content, and publish the site.
