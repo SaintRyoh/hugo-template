@@ -1,3 +1,3 @@
-[submodule "quickstart/themes/hugo-profile"]
-	path = quickstart/themes/hugo-profile
-	url = https://github.com/gurusabarish/hugo-profile.git
+[submodule "themes/hugo-profile"]
+	path = themes/hugo-profile
+	url = https://github.com/SaintRyoh/hugo-profile.git
