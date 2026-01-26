@@ -5,6 +5,11 @@
     "dockerfile": "Dockerfile"
   },
 
+  // Mount host .gitconfig to share git user name/email with container
+  "mounts": [
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+  ],
+
   // 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
   // "features": { "ghcr.io/devcontainers/features/docker-in-docker:2": {} },
 
