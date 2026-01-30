@@ -1,0 +1,7 @@
+name = "Under Construction"
+license = "MIT"
+description = "A minimal placeholder theme to display an 'under construction' message."
+min_version = "0.68.0"
+
+[author]
+  name = ""
